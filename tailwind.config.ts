@@ -14,8 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Playfair Display"', 'serif'],
-        sans: ['"DM Sans"', 'sans-serif'],
+        display: ['"Orbitron"', 'sans-serif'],
+        sans: ['"Inter"', 'sans-serif'],
+        mono: ['"Space Grotesk"', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -56,9 +57,13 @@ export default {
           light: "hsl(var(--gold-light))",
           dark: "hsl(var(--gold-dark))",
         },
-        teal: {
-          DEFAULT: "hsl(var(--teal))",
-          light: "hsl(var(--teal-light))",
+        cyan: {
+          DEFAULT: "hsl(var(--cyan))",
+          light: "hsl(var(--cyan-light))",
+        },
+        purple: {
+          DEFAULT: "hsl(var(--purple))",
+          light: "hsl(var(--purple-light))",
         },
         charcoal: {
           DEFAULT: "hsl(var(--charcoal))",
@@ -97,12 +102,22 @@ export default {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
         },
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        glow: {
+          "0%, 100%": { boxShadow: "0 0 20px hsl(45 100% 55% / 0.2)" },
+          "50%": { boxShadow: "0 0 40px hsl(45 100% 55% / 0.4)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        shimmer: "shimmer 2s linear infinite",
+        shimmer: "shimmer 3s linear infinite",
         pulse: "pulse 2s ease-in-out infinite",
+        float: "float 4s ease-in-out infinite",
+        glow: "glow 2s ease-in-out infinite",
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
